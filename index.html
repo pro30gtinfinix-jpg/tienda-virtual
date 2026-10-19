@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENGAR STUDIO | Tienda Virtual - Oruro, Bolivia</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-gengar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio"><i class="bi bi-stars"></i> GENGAR STUDIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#redes">Redes</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-lg-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                            <i class="bi bi-bag"></i> Carrito (<span id="contadorCarrito">0</span>)
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-admin btn-sm ms-lg-2" onclick="mostrarAdmin()">
+                            <i class="bi bi-shield-lock"></i> Admin
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== VISTA TIENDA ===== -->
+    <div id="vistaTienda">
+
+        <!-- ===== INICIO / HERO ===== -->
+        <section id="inicio" class="seccion-hero">
+            <!-- ===== CARRUSEL PRINCIPAL =====
+                 Para cambiar las 4 imágenes del carrusel, edita las variables
+                 --carrusel-img-1 a --carrusel-img-4 al
+                 inicio de styles.css (puedes pegar una URL: url('https://...')). Ahora va de fondo del inicio (hero). -->
+            <div class="carrusel-gengar">
+                <div id="carruselPrincipal" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carrusel-imagen carrusel-slide-1"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carrusel-imagen carrusel-slide-2"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carrusel-imagen carrusel-slide-3"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carrusel-imagen carrusel-slide-4"></div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev d-none d-md-flex" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next d-none d-md-flex" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="capa-oscura-hero"></div>
+            <div class="container text-center text-lg-start contenido-hero">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <span class="badge badge-gengar mb-3">Streetwear de Oruro</span>
+                        <h1 class="fw-bold display-5 text-light">Ropa con actitud de fantasma</h1>
+                        <p class="lead text-light-50">GENGAR STUDIO es una tienda de ropa urbana hecha por jóvenes de Oruro, para jóvenes de Oruro. Poleras, chamarras, pantalones y accesorios con estilo propio.</p>
+                        <a href="#catalogo" class="btn btn-lima btn-lg mt-2"><i class="bi bi-bag-check"></i> Ver catálogo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOBRE NOSOTROS ===== -->
+        <section id="nosotros" class="py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <span class="badge badge-gengar mb-2">Nuestra historia</span>
+                        <h2 class="fw-bold">Sobre nosotros</h2>
+                        <p>GENGAR STUDIO nació como un proyecto de estudiantes de Oruro con ganas de crear algo propio: ropa urbana con diseños distintos a lo que se encuentra normalmente en las tiendas de la ciudad.</p>
+                        <p>La idea surgió por el gusto compartido por la cultura streetwear y por las ganas de aprender, a la vez, cómo se arma un negocio desde cero: desde elegir los productos hasta programar la página donde se venden.</p>
+                        <p>Buscamos ofrecer prendas cómodas, con identidad, a un precio accesible para jóvenes, y coordinar cada entrega de forma personal por WhatsApp.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card card-gengar p-4">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-bullseye"></i> ¿Qué nos diferencia?</h5>
+                            <ul class="lista-check">
+                                <li><i class="bi bi-check2-circle"></i> Diseños propios, inspirados en la cultura urbana</li>
+                                <li><i class="bi bi-check2-circle"></i> Prendas en cantidades limitadas</li>
+                                <li><i class="bi bi-check2-circle"></i> Atención directa por WhatsApp</li>
+                                <li><i class="bi bi-check2-circle"></i> Entrega coordinada en puntos de Oruro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CATALOGO ===== -->
+        <section id="catalogo" class="py-5 seccion-catalogo">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="badge badge-gengar mb-2">Colección</span>
+                    <h2 class="fw-bold">Catálogo</h2>
+                </div>
+
+                <div class="row g-2 mb-4 justify-content-center">
+                    <div class="col-md-5">
+                        <input type="text" id="buscador" class="form-control" placeholder="Buscar producto...">
+                    </div>
+                    <div class="col-md-3">
+                        <select id="filtroCategoria" class="form-select">
+                            <option value="Todos">Todos</option>
+                            <option value="Poleras">Poleras</option>
+                            <option value="Chamarras">Chamarras</option>
+                            <option value="Busos/Pantalones">Busos/Pantalones</option>
+                            <option value="Canguros/Sudaderas/Chaquetas">Canguros/Sudaderas/Chaquetas</option>
+                            <option value="Accesorios">Accesorios</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="listaProductos">
+                    <!-- Las tarjetas de producto se generan con JavaScript -->
+                </div>
+                <div id="errorCatalogo" class="alert alert-danger d-none"></div>
+                <p id="sinResultados" class="text-center text-muted mt-4 d-none">No se encontraron productos con esa búsqueda.</p>
+                <p id="catalogoVacio" class="text-center text-muted mt-4 d-none">Pronto subiremos nuevas prendas. ¡Vuelve a visitarnos!</p>
+            </div>
+        </section>
+
+        <!-- ===== REDES SOCIALES ===== -->
+        <section id="redes" class="py-5 text-center seccion-redes">
+            <div class="container">
+                <h2 class="fw-bold text-light mb-2">Síguenos en nuestras redes</h2>
+                <p class="text-light-50 mb-4">Novedades, lanzamientos y pedidos directos.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="https://instagram.com/gengar_closet" target="_blank" class="btn btn-red-social">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                    <a href="https://wa.me/59174108456" target="_blank" class="btn btn-red-social">
+                        <i class="bi bi-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://tiktok.com/@gengar_closet" target="_blank" class="btn btn-red-social">
+                        <i class="bi bi-tiktok"></i> TikTok
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== VISTA ADMINISTRADOR (oculta hasta que se ingresa la clave) ===== -->
+    <div id="vistaAdmin" class="d-none">
+        <div class="container py-5" style="margin-top:60px;">
+
+            <!-- Login del admin -->
+            <div id="loginAdmin" class="mx-auto card card-gengar p-4" style="max-width:380px;">
+                <h5 class="fw-bold mb-3"><i class="bi bi-shield-lock"></i> Acceso administrador</h5>
+                <form id="formLoginAdmin">
+                    <input type="password" id="claveAdmin" class="form-control mb-3" placeholder="Contraseña" required>
+                    <button type="submit" class="btn btn-lima w-100">Ingresar</button>
+                    <button type="button" class="btn btn-link w-100 mt-1" onclick="mostrarTienda()">Volver a la tienda</button>
+                </form>
+                <p id="errorClave" class="text-danger small mt-2 d-none">Contraseña incorrecta.</p>
+            </div>
+
+            <!-- Panel del admin -->
+            <div id="panelAdmin" class="d-none">
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                    <h2 class="fw-bold mb-0">Panel de administración</h2>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="mostrarTienda()"><i class="bi bi-arrow-left"></i> Volver a la tienda</button>
+                </div>
+
+                <ul class="nav nav-tabs mb-4" role="tablist">
+                    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabProductos">Productos</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabReservas">Reservas</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabPedidos">Pedidos</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabVentas">Ventas y ganancias</button></li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <!-- ---- TAB PRODUCTOS ---- -->
+                    <div class="tab-pane fade show active" id="tabProductos">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="card card-gengar p-3">
+                                    <h6 class="fw-bold mb-3" id="tituloFormProducto">Nuevo producto</h6>
+                                    <form id="formProducto">
+                                        <input type="hidden" id="productoId">
+                                        <input type="text" id="pNombre" class="form-control mb-2" placeholder="Nombre" required>
+                                        <textarea id="pDescripcion" class="form-control mb-2" placeholder="Descripción" rows="2" required></textarea>
+                                        <select id="pCategoria" class="form-select mb-2" required>
+                                            <option value="Poleras">Poleras</option>
+                                            <option value="Chamarras">Chamarras</option>
+                                            <option value="Busos/Pantalones">Busos/Pantalones</option>
+                                            <option value="Canguros/Sudaderas/Chaquetas">Canguros/Sudaderas/Chaquetas</option>
+                                            <option value="Accesorios">Accesorios</option>
+                                        </select>
+                                        <div class="row g-2">
+                                            <div class="col-6"><input type="text" id="pTalla" class="form-control mb-2" placeholder="Talla" required></div>
+                                            <div class="col-6"><input type="text" id="pColor" class="form-control mb-2" placeholder="Color" required></div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="col-6"><input type="number" step="0.01" min="0" id="pCompra" class="form-control mb-2" placeholder="Precio compra (Bs)" required></div>
+                                            <div class="col-6"><input type="number" step="0.01" min="0" id="pVenta" class="form-control mb-2" placeholder="Precio venta (Bs)" required></div>
+                                        </div>
+                                        <input type="text" id="pImagen" class="form-control mb-3" placeholder="URL de la imagen (https://...)" required>
+                                        <button type="submit" class="btn btn-lima w-100">Guardar producto</button>
+                                        <button type="button" id="btnCancelarEdicion" class="btn btn-link w-100 mt-1 d-none" onclick="cancelarEdicionProducto()">Cancelar edición</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="table-responsive">
+                                    <table class="table table-sm align-middle tabla-admin">
+                                        <thead>
+                                            <tr><th></th><th>Nombre</th><th>Compra</th><th>Venta</th><th>Ganancia</th><th>Estado</th><th></th></tr>
+                                        </thead>
+                                        <tbody id="tablaProductos"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ---- TAB RESERVAS ---- -->
+                    <div class="tab-pane fade" id="tabReservas">
+                        <p class="text-muted small">Prendas que un cliente ya pidió por WhatsApp. Al confirmar el pago pasan a "Ventas y ganancias".</p>
+                        <div class="row g-4" id="listaReservas"></div>
+                        <p id="sinReservas" class="text-muted d-none">No hay prendas reservadas en este momento.</p>
+                    </div>
+
+                    <!-- ---- TAB PEDIDOS ---- -->
+                    <div class="tab-pane fade" id="tabPedidos">
+                        <div id="listaPedidosAdmin"></div>
+                        <p id="sinPedidos" class="text-muted d-none">Todavía no hay pedidos registrados.</p>
+                    </div>
+
+                    <!-- ---- TAB VENTAS ---- -->
+                    <div class="tab-pane fade" id="tabVentas">
+                        <div class="row g-3 mb-4" id="resumenVentas"></div>
+
+                        <h6 class="fw-bold mb-3"><i class="bi bi-bag-check"></i> Prendas vendidas</h6>
+                        <p class="text-muted small">Escribe el precio final de venta de cada prenda y presiona Guardar. Una vez guardado, ya no se puede editar y la venta cuenta en las ganancias.</p>
+                        <div class="row g-4 mb-5" id="listaVendidas"></div>
+                        <p id="sinVendidas" class="text-muted d-none">Todavía no hay ventas confirmadas.</p>
+
+                        <h6 class="fw-bold mb-3"><i class="bi bi-calendar-month"></i> Ventas por mes</h6>
+                        <div id="mesActual" class="mb-3"></div>
+                        <div class="table-responsive mb-5">
+                            <table class="table table-sm align-middle tabla-admin">
+                                <thead>
+                                    <tr><th>Mes</th><th>Prendas vendidas</th><th>Ingresos</th><th>Ganancia</th><th>Sin precio final</th></tr>
+                                </thead>
+                                <tbody id="tablaMeses"></tbody>
+                            </table>
+                        </div>
+
+                        <h6 class="fw-bold mb-3"><i class="bi bi-calendar3"></i> Resumen por año</h6>
+                        <div class="table-responsive">
+                            <table class="table table-sm align-middle tabla-admin">
+                                <thead>
+                                    <tr><th>Año</th><th>Estado</th><th>Prendas vendidas</th><th>Ingresos</th><th>Ganancia</th></tr>
+                                </thead>
+                                <tbody id="tablaAnios"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== OFFCANVAS DEL CARRITO ===== -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito">
+        <div class="offcanvas-header">
+            <h5 class="fw-bold"><i class="bi bi-bag"></i> Tu carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="listaCarrito" class="flex-grow-1"></div>
+            <p id="carritoVacio" class="text-muted text-center mt-4">Tu carrito está vacío.</p>
+            <div id="resumenCarrito" class="d-none">
+                <hr>
+                <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                    <span>Total</span><span id="totalCarrito">Bs 0.00</span>
+                </div>
+                <button class="btn btn-outline-secondary w-100 mb-2" onclick="vaciarCarrito()">Vaciar carrito</button>
+                <button class="btn btn-lima w-100" data-bs-toggle="modal" data-bs-target="#modalPedido" data-bs-dismiss="offcanvas">
+                    <i class="bi bi-whatsapp"></i> Finalizar pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: DATOS DE ENTREGA Y ENVÍO POR WHATSAPP ===== -->
+    <div class="modal fade" id="modalPedido" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Coordinar entrega</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="formPedido">
+                    <div class="modal-body">
+                        <input type="text" id="clienteNombre" class="form-control mb-2" placeholder="Tu nombre" required>
+                        <input type="text" id="clienteWhatsapp" class="form-control mb-2" placeholder="Tu WhatsApp (con código, ej. 71234567)" required>
+                        <select id="pedidoLugar" class="form-select mb-2" required onchange="actualizarHorarios()">
+                            <option value="">Selecciona un lugar de encuentro...</option>
+                        </select>
+                        <input type="date" id="pedidoFecha" class="form-control mb-2" required onchange="actualizarHorarios()">
+                        <select id="pedidoHora" class="form-select mb-2" required>
+                            <option value="">Elige fecha y lugar primero...</option>
+                        </select>
+                        <p class="small text-muted mb-0">Horarios: Lun-Vie 8:00-12:00 y 19:00-20:00 · Sáb-Dom 9:00-19:00.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-lima w-100"><i class="bi bi-whatsapp"></i> Enviar pedido por WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: RECIBO ===== -->
+    <div class="modal fade" id="modalRecibo" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Recibo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="contenidoRecibo"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-lima w-100" onclick="window.print()"><i class="bi bi-printer"></i> Imprimir / Guardar como PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-gengar pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold text-light">GENGAR STUDIO</h5>
+                    <p class="text-light-50 small">Ropa urbana hecha en Oruro, Bolivia. Proyecto de Técnico Medio en Sistemas Informáticos.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-light"><i class="bi bi-geo-alt"></i> Puntos de entrega</h6>
+                    <p class="text-light-50 small">Ex terminal de Oruro, Hotel Monarca, Mercado Narciso Campero, Mercado Walter Khon, Mercado Simón Bolívar.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-light"><i class="bi bi-whatsapp"></i> Contacto</h6>
+                    <p class="text-light-50 small">WhatsApp: <a href="https://wa.me/59174108456" class="text-light">74108456</a></p>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25 mt-4">
+            <p class="text-center text-light-50 small mb-0">&copy; 2026 GENGAR STUDIO. Proyecto escolar - Técnico Medio en Sistemas Informáticos.</p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

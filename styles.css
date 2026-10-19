@@ -1,0 +1,263 @@
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+    --violeta: #6B2FA8;
+    --violeta-claro: #9B5DE5;
+    --lima: #D4FF3D;
+    --fondo-oscuro: #170B22;
+    --panel-oscuro: #211130;
+
+    /* ===== IMÁGENES DEL CARRUSEL =====
+       Fotos de Google Drive (deben estar compartidas como "Cualquier
+       persona con el enlace"). Para cambiar una, cambia el id= de la URL
+       o pega otra: url('https://tu-sitio.com/foto.jpg') */
+    --carrusel-img-1: url('https://drive.google.com/thumbnail?id=1MtSOG7NX9eZS9xsw_mxTaGLgfrt5YEib&sz=w1920');
+    --carrusel-img-2: url('https://drive.google.com/thumbnail?id=1NyxPkfDHmXwgzxg4G7R5vBC-lbmUCky-&sz=w1920');
+    --carrusel-img-3: url('https://drive.google.com/thumbnail?id=1wZMxr5nh01TWIVOQSqioAR19Ceqt-Mxq&sz=w1920');
+    --carrusel-img-4: url('https://drive.google.com/thumbnail?id=1qeAGpVZEwr0DPFCa7nPrg_EZ5gIHLDjl&sz=w1920');
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+#vistaAdmin {
+    padding-top: 10px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-gengar {
+    background-color: var(--fondo-oscuro);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.navbar-gengar .nav-link {
+    color: #f0e9fa !important;
+    font-weight: 500;
+}
+.navbar-gengar .nav-link:hover {
+    color: var(--lima) !important;
+}
+.navbar-brand {
+    color: var(--lima) !important;
+    font-weight: 700;
+}
+.btn-admin {
+    background-color: transparent;
+    border: 1px solid var(--violeta-claro);
+    color: #f0e9fa;
+}
+.btn-admin:hover {
+    background-color: var(--violeta-claro);
+    color: #fff;
+}
+
+/* ===== BOTONES ===== */
+.btn-lima {
+    background-color: var(--lima);
+    color: var(--fondo-oscuro);
+    font-weight: 700;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-lima:hover {
+    background-color: #c2eb2e;
+    color: var(--fondo-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(212, 255, 61, 0.35);
+}
+.btn-red-social {
+    background-color: var(--panel-oscuro);
+    color: #fff;
+    border: 1px solid var(--violeta-claro);
+    border-radius: 50px;
+    padding: 0.6rem 1.6rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.btn-red-social:hover {
+    background-color: var(--violeta-claro);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* ===== BADGE ===== */
+.badge-gengar {
+    background-color: rgba(107, 47, 168, 0.12);
+    color: var(--violeta);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ===== HERO ===== */
+.seccion-hero {
+    background: linear-gradient(135deg, var(--fondo-oscuro) 0%, var(--violeta) 120%);
+    padding: 10rem 0 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.capa-oscura-hero {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(23, 11, 34, 0.85) 0%, rgba(23, 11, 34, 0.45) 100%);
+    z-index: 1;
+}
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+}
+.text-light-50 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== CARDS ===== */
+.card-gengar {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.lista-check {
+    list-style: none;
+    padding-left: 0;
+}
+.lista-check li {
+    padding: 0.3rem 0;
+}
+.lista-check i {
+    color: var(--violeta);
+    margin-right: 0.5rem;
+}
+
+/* ===== CATALOGO ===== */
+.seccion-catalogo {
+    background-color: #faf8fc;
+}
+.tarjeta-producto {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s, box-shadow 0.25s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta-producto .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.tarjeta-producto .card-body .precio-venta {
+    margin-top: auto;
+}
+.tarjeta-producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(107, 47, 168, 0.2);
+}
+.tarjeta-producto img {
+    height: 260px;
+    object-fit: cover;
+    width: 100%;
+}
+.precio-venta {
+    color: var(--violeta);
+    font-weight: 700;
+}
+.etiqueta-agotado {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #b71c1c;
+    color: #fff;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* ===== REDES / FOOTER ===== */
+.seccion-redes,
+.footer-gengar {
+    background-color: var(--fondo-oscuro);
+}
+
+/* ===== TABLA ADMIN ===== */
+.tabla-admin img {
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ===== IMPRESIÓN DEL RECIBO ===== */
+@media print {
+    .navbar-gengar, .footer-gengar, .modal-header, .modal-footer {
+        display: none !important;
+    }
+}
+
+/* ===== CARRUSEL PRINCIPAL ===== */
+.carrusel-gengar {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.carrusel-gengar .carousel,
+.carrusel-gengar .carousel-inner,
+.carrusel-gengar .carousel-item {
+    height: 100%;
+}
+.carrusel-imagen {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.carrusel-slide-1 { background-image: var(--carrusel-img-1); }
+.carrusel-slide-2 { background-image: var(--carrusel-img-2); }
+.carrusel-slide-3 { background-image: var(--carrusel-img-3); }
+.carrusel-slide-4 { background-image: var(--carrusel-img-4); }
+
+.carrusel-gengar .carousel-control-prev,
+.carrusel-gengar .carousel-control-next,
+.carrusel-gengar .carousel-indicators {
+    z-index: 3;
+}
+.carrusel-gengar .carousel-control-prev-icon,
+.carrusel-gengar .carousel-control-next-icon {
+    background-color: rgba(107, 47, 168, 0.75);
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-size: 50%;
+}
+.carrusel-gengar .carousel-indicators [data-bs-target] {
+    background-color: var(--lima);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+/* ===== TARJETAS DE RESERVAS Y VENTAS (admin) ===== */
+.tarjeta-admin {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta-admin img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+.tarjeta-admin .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.tarjeta-admin .zona-acciones {
+    margin-top: auto;
+}
